@@ -1,0 +1,38 @@
+header {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  z-index:2;
+  #header_content {
+    display: flex;
+    height: 100%;
+    .wrapLogo {
+      width: 40%;
+      height: 100%;
+      h2 {
+        line-height: 80px;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+    .wrapMenu {
+      width: 60%;
+      height: 100%;
+      ul {
+        list-style-type: none;
+        line-height: 80px;
+        text-align: right;
+        a {
+          color: #fff;
+          .item {
+            display: inline-block;
+            margin-right: 20px;
+          }
+          .item:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
