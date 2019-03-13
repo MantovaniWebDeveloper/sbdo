@@ -1,0 +1,63 @@
+.costoBox {
+  text-align: right;
+}
+.contatti {
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #efefef;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+
+    }
+  }
+}
+.generi {
+  .salsaCubana {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+  }
+  .salsaPortoricana {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+  }
+  .bachata {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+  }
+  .kizomba {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+  }
+}
+.gmap_canvas {
+  height: 400px;
+  #gmap_canvas {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .costoBox {
+    text-align: left;
+
+  }
+  .contatti {
+    margin-top: 20px;
+  }
+
+}
+@include media-breakpoint-down(xs) {
+ .contatti {
+   margin-top: 20px;
+ }
+}

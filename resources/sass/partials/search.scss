@@ -28,12 +28,39 @@
           justify-content: center;
           align-items: center;
           height: 450px;
-          h3 {
+          .motto {
             font-size: 30px;
             font-weight: bold;
             text-align: center;
           }
+          .btnInvioForm {
+            width: 100%;
+          }
         }
       }
   }
+}
+
+@include media-breakpoint-down(sm) {
+  .wrapTotale {
+    height: 350px;
+    .sfondoFront {
+      height: 400px;
+      .opacita {
+        height: 400px;
+        .wrapForm {
+          height: 400px;
+          .motto {
+            font-size: 20px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+
 }

@@ -4,36 +4,39 @@
 @include('_partials._searchInterno')
 
 <!--QUI CI VANNO I RISULTATI DEL FORM SEARCH EVENTI-->
-<div class="container">
-  @foreach ($eventi as $key => $evento)
-    <div class="row resultContentInterno">
-      <div class="col-5">
-        <div class="imgCategory">
-          <img class="img-fluid" src="{{asset('images/logocasino.png')}}" alt="">
+<div class="wrapResultEvent">
+  <div class="container">
+    <h3 class="titoloHomeResult">Risultati della ricerca: </h3>
+        @foreach ($eventi as $key => $evento)
+            <div class="wrapReslutContentInterno">
+              <div class="row">
+              <div class="imgCategory col-12 col-sm-12 col-md-4 col-lg-4">
+                <img class="img-fluid" src="{{asset($evento->locandina)}}" alt="">
 
-        </div>
-      </div>
-      <div class="col-7">
-        <h2>{{$evento->nomeEvento}}</h2>
-        @if($evento->costo_ingresso == 0)
-          <span>Ingresso gratuito</span>
+              </div>
+              <div class="contentText col-12 col-sm-12 col-md-8 col-lg-8">
+                <a href="{{ route('event.show', $evento->id) }}"><span class="nomeEvento pr-3 ">{{$evento->nomeEvento}}</span></a>
+                  @if($evento->costo_ingresso == 0)
+                    <span>Ingresso gratuito</span>
 
-        @else
-          <span>costo ingresso: {{$evento->costo_ingresso}} €</span>
+                  @else
+                    <span>costo ingresso: {{$evento->costo_ingresso}} €</span>
 
-        @endif
-        <div>
-          <i class="fas fa-map-marker-alt pr-2"></i>
-          <small>{{$evento->nomeLocale}}</small>
-          <small>{{$evento->indirizzo}}</small>
-          <small>{{$evento->citta}}</small> - <small>{{$evento->provincia}}</small>
-          <p>{{$evento->descrizione}}</p>
-        </div>
-      
-      </div>
-    </div>
-  @endforeach
+                  @endif
+                  <div>
+                    <i class="fas fa-map-marker-alt pr-2"></i>
+                    <small>{{$evento->nomeLocale}}</small>
+                    <small >{{$evento->indirizzo}}</small>
+                    <small>{{$evento->citta}}</small> - <small>{{$evento->provincia}}</small>
+                    <p class="pt-3">{{$evento->descrizione}}</p>
+                  </div>
 
+
+              </div>
+            </div>
+
+          </div>
+        @endforeach
+  </div>
 </div>
-
 @endsection

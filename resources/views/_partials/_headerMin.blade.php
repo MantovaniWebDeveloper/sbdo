@@ -1,9 +1,9 @@
 <header id="headerMin">
   <div id="header_content"class="container">
-    <div class="wrapLogo">
-      <h2>{{config('app.name', 'Laravel')}}</h2>
+    <div class="wrapLogoMin">
+      <a href="{{ route('home') }}"><img class="img-fluid logoHeader" src="{{asset('images/staseraballiamo_logo.png')}}" /></a>
     </div>
-    <div class="wrapMenu">
+    <div class="wrapMenuMin">
       <ul>
         <a href="">
           <li class="item">Home</li>

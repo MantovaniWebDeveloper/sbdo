@@ -1,6 +1,40 @@
 .wrapResultEvent {
     height: 500px;
     width: 100%;
+    .titoloHomeResult {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #efefef;
+      }
+    .wrapReslutContentInterno {
+      border-bottom: 1px solid #efefef;
+      margin-bottom: 30px;
+      .nomeEvento {
+        font-size: 25px;
+      }
+      .salsaCubana {
+        background-color: red;
+        color: #fff;
+        text-align: center;
+      }
+      .salsaPortoricana {
+        background-color: red;
+        color: #fff;
+        text-align: center;
+      }
+      .bachata {
+        background-color: red;
+        color: #fff;
+        text-align: center;
+      }
+      .kizomba {
+        background-color: red;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+  }
+  /*
     #container_result {
      display: flex;
      height: 100%;
@@ -82,4 +116,37 @@
       }
     }
 
+}*/
+@include media-breakpoint-down(md) {
+  .wrapResultEvent {
+    #container_result {
+      .resultContent {
+        width: 100%;
+      }
+    }
+  }
+  .sidebar {
+    display: none;
+  }
+
+}
+@include media-breakpoint-down(sm) {
+
+}
+@include media-breakpoint-down(xs) {
+.titoloHomeResult {
+    font-size: 22px;
+  }
+.salsaCubana {
+  font-size: 10px;
+}
+.salsaPortoricana {
+  font-size: 10px;
+}
+.bachata {
+  font-size: 10px;
+}
+.kizomba {
+  font-size: 10px;
+}
 }

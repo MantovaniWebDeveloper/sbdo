@@ -16,7 +16,7 @@ class HomeController extends Controller
 
       //dd($dataOdierna);
 
-      $eventi = Event::where('data_svolgimento',$dataOdierna)->get();
+      $eventi = Event::where('data_svolgimento',$dataOdierna)->orderBy('data_svolgimento', 'desc')->get();
     //dd($eventi);
 
 

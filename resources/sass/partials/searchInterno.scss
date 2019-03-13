@@ -6,7 +6,20 @@
       height: 250px;
       #internoWrapForm {
         height: 250px;
+        .btnInvioForm {
+          width: 100%;
+        }
       }
     }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .inputMobile {
+    padding-top: 10px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .inputMobile {
+    padding-top: 10px;
   }
 }

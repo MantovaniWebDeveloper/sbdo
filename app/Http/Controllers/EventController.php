@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Local;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,10 @@ class EventController extends Controller
         //
     }
 
-    public function show(Request $request)
+    public function show($id)
     {
-
+      $evento = Event::find($id);
+      return view('vistaEventoSingolo', compact('evento'));
     }
 
     public function search(Request $request)
@@ -33,7 +35,6 @@ class EventController extends Controller
       $validazioneDatiRicevuti = $request->validate([
 
         'localita' => 'required|min:3',
-        'genere' => 'required',
         'data' => 'required',
 
       ]);
@@ -41,21 +42,18 @@ class EventController extends Controller
       //dd($validazioneDatiRicevuti);
 
       $localita = $validazioneDatiRicevuti["localita"];
-      $genere = $validazioneDatiRicevuti["genere"];
       $data = $validazioneDatiRicevuti["data"];
 
       //adesso creo la query
-      $eventi = DB::table('events')
+    $eventi = DB::table('events')
             ->join('locals', 'locale_id', '=', 'locals.id')
-            ->join('event_genre','event_id','=', 'events.id')
-            ->join('genres','event_genre.genre_id','=', 'genres.id')
-            ->select('events.nome as nomeEvento', 'events.organizzatore','events.descrizione','events.costo_ingresso','events.data_svolgimento',
+            ->select('events.id','events.nome as nomeEvento', 'events.locandina','events.organizzatore','events.descrizione','events.costo_ingresso','events.data_svolgimento',
                     'locals.nome as nomeLocale', 'locals.provincia', 'locals.citta', 'locals.indirizzo', 'locals.cap')
             ->where('data_svolgimento',$data)
             ->where('provincia',$localita)
-            ->where('genre_id',$genere)
             ->get();
-    //  dd($result);
+
+    //  dd($localita);
 
       return view('result',compact('eventi'));
     }

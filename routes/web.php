@@ -11,7 +11,7 @@
 |
 */
 //rotta per la parte pubblica home
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
