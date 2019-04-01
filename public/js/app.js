@@ -36581,11 +36581,6 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-$.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
 $(document).ready(function () {
   //jquery front end
   var hamburger = $('.hambMenu ');
