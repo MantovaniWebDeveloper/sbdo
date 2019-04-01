@@ -8,13 +8,17 @@
               <p class="lead" >Le migliori serate di Salsa cubana, Salsa portoricana, Bachata, Kizomba sul terriotorio italiano</small>
             </div>
 
-          <form class="" action="{{route('event.search')}}" method="POST">
+          <form class="" action="{{route('ricercaEventi')}}" method="get">
             @csrf
-            @method('POST')
+            @method('GET')
 
             <div class="form-row">
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                 <input type="text" class="form-control" placeholder="Inserisci la città" name="localita">
+                 <!-- <input type="text" class="form-control" placeholder="Inserisci la città" name="localita"> -->
+                 <input id="citta-input"class="form-control" lat="" name="localita" list="cities" style="width:100%"/>
+                    <datalist id="cities" style="width:100%">
+                      {{--questo sarà riempito da handlebars--}}
+                    </datalist>
               </div>
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                 <input class="form-control"type="date" name="data" value="">
@@ -29,3 +33,12 @@
     </div>
   </div>
 </div>
+
+<!-- ZONA HANDLEBARS!!!-->
+<script id="listaCitta-template" type="text/x-handlebars-template">
+  @{{#each this}}
+        <option class="elemento" data-id="@{{sigla}}" value="@{{provincia}}"></option>
+  @{{/each}}
+  </datalist>
+
+</script>

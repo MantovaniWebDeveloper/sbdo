@@ -16,6 +16,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::resource('event','EventController');
-Route::post('/event','EventController@search')->name('event.search');
+Route::get('/eventi','EventController@search')->name('ricercaEventi');
 //rotta privata per la parte amministrativa admin
 Route::get('/admin', 'Admin\AdminController@index')->name('admin');

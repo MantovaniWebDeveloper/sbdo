@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Stasera balliamo</title>
   </head>
   <body>
     @yield('content')
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          <p>&copy; Dario Mantovani - 2019</p>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ asset('js/geolocation.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/form.js') }}"></script>
   </body>
 </html>

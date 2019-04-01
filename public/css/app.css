@@ -4744,7 +4744,6 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 
@@ -11034,89 +11033,10 @@ header .hamburgerMobileMenu {
   text-align: center;
 }
 
-/*
-    #container_result {
-     display: flex;
-     height: 100%;
-      .resultContent {
-        width: 70%;
-        height: 100%;
-        .wrapReslutContentInterno {
-          padding: 20px;
-          display: flex;
-          height: 230px;
-          border-bottom: 1px solid #efefef;
-          margin-bottom: 15px;
-          .imgCategory {
-            width:30%;
-            height: 200px;
-            margin-right: 15px;
-          }
-          .contentText {
-            width:70%;
-            height: 200px;
-            .nomeEvento{
-              font-size: 25px;
-            }
-            .wrapGeneriList{
-              display: flex;
-              padding-top: 5px;
-              height: 40px;
-              width: 100%;
-              & > div {
-                margin-right: 15px;
-              }
-              .salsaCubana {
-                p {
-                  background-color: red;
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 110px;
-                }
-              }
-              .salsaPortoricana {
-                p {
-                  background-color: rgb(179, 38, 208);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 140px;
-                }
-              }
-              .bachata {
-                p {
-                  background-color: rgb(152, 22, 108);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 70px;
-                }
-              }
-              .kizomba {
-                p {
-                  background-color: rgb(231, 83, 37);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 75px;
-                }
-              }
-            }
-          }
-        }
-
-      }
-      .sidebar {
-        background-color: #fbfbfb;
-        margin-left: 10px;
-        width: 30%;
-        height: 100%;
-        border-radius: 5px;
-      }
-    }
-
-}*/
+.wrapCategorieFront {
+  width: 100%;
+  height: 200px;
+}
 
 @media (max-width: 991.98px) {
   .wrapResultEvent #container_result .resultContent {
@@ -11215,5 +11135,79 @@ header .hamburgerMobileMenu {
   .contatti {
     margin-top: 20px;
   }
+}
+
+.promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background: url(/images/promo.png?060bc6a81ad71de2474d671433505a7a) no-repeat center top;
+  background-size: cover;
+}
+
+.promo .jumboTesto .jumboTitolo {
+  color: #fff;
+  text-align: center;
+}
+
+.promo .jumboTesto .jumboSottoTitolo {
+  color: #fff;
+  text-align: center;
+}
+
+.quadro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec407a;
+  color: #fff;
+  width: 100%;
+  height: 400px;
+  border: 4px solid #fff;
+}
+
+.quadro .quadroTitolo {
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.rettangolo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background-color: #000;
+  border: 4px solid #fff;
+  color: #fff;
+}
+
+.rettangolo .wrapImgInfo {
+  width: 70%;
+}
+
+.rettangolo .wrapImgInfo img {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #656565;
+  margin-top: 30px;
+}
+
+footer .copyright {
+  height: 100%;
+}
+
+footer .copyright p {
+  line-height: 200px;
+  text-align: center;
+  color: #cbcbcb;
 }
 

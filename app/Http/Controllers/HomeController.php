@@ -5,6 +5,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Event;
 use App\Locals;
+use App\Genre;
 
 class HomeController extends Controller
 {
@@ -18,14 +19,11 @@ class HomeController extends Controller
 
       $eventi = Event::where('data_svolgimento',$dataOdierna)->orderBy('data_svolgimento', 'desc')->get();
     //dd($eventi);
+      $generi = Genre::all();
 
 
-
-
-      return view('frontpage', compact('eventi','dataOdierna'));
+      return view('frontpage', compact('eventi','dataOdierna','generi'));
     }
-
-
 
 
 }

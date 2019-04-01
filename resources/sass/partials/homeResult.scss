@@ -32,91 +32,12 @@
         text-align: center;
       }
     }
-
   }
-  /*
-    #container_result {
-     display: flex;
-     height: 100%;
-      .resultContent {
-        width: 70%;
-        height: 100%;
-        .wrapReslutContentInterno {
-          padding: 20px;
-          display: flex;
-          height: 230px;
-          border-bottom: 1px solid #efefef;
-          margin-bottom: 15px;
-          .imgCategory {
-            width:30%;
-            height: 200px;
-            margin-right: 15px;
-          }
-          .contentText {
-            width:70%;
-            height: 200px;
-            .nomeEvento{
-              font-size: 25px;
-            }
-            .wrapGeneriList{
-              display: flex;
-              padding-top: 5px;
-              height: 40px;
-              width: 100%;
-              & > div {
-                margin-right: 15px;
-              }
-              .salsaCubana {
-                p {
-                  background-color: red;
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 110px;
-                }
-              }
-              .salsaPortoricana {
-                p {
-                  background-color: rgb(179, 38, 208);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 140px;
-                }
-              }
-              .bachata {
-                p {
-                  background-color: rgb(152, 22, 108);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 70px;
-                }
-              }
-              .kizomba {
-                p {
-                  background-color: rgb(231, 83, 37);
-                  border-radius: 5px;
-                  padding-left: 10px;
-                  color: #fff;
-                  width: 75px;
-                }
-              }
-            }
-          }
-        }
+.wrapCategorieFront {
+  width: 100%;
+  height: 200px;
+}
 
-      }
-      .sidebar {
-        background-color: #fbfbfb;
-        margin-left: 10px;
-        width: 30%;
-        height: 100%;
-        border-radius: 5px;
-      }
-    }
-
-}*/
 @include media-breakpoint-down(md) {
   .wrapResultEvent {
     #container_result {
@@ -128,8 +49,8 @@
   .sidebar {
     display: none;
   }
-
 }
+
 @include media-breakpoint-down(sm) {
 
 }

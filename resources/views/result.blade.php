@@ -6,7 +6,8 @@
 <!--QUI CI VANNO I RISULTATI DEL FORM SEARCH EVENTI-->
 <div class="wrapResultEvent">
   <div class="container">
-    <h3 class="titoloHomeResult">Risultati della ricerca: </h3>
+    <h3 class="titoloHomeResult">Risultati della ricerca su : {{$localita}}</h3>
+
         @foreach ($eventi as $key => $evento)
             <div class="wrapReslutContentInterno">
               <div class="row">
