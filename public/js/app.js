@@ -36582,7 +36582,11 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 $(document).ready(function () {
-  //jquery front end
+  //recuperare data odierna e poi inserita nel inputa della data del search
+  var oggi = new Date().toISOString().substr(0, 10);
+  console.log(oggi);
+  $('#dataGiorno').val(oggi); //jquery front end
+
   var hamburger = $('.hambMenu ');
   hamburger.on("click", function () {
     console.log('mi hai cliccato');

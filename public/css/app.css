@@ -10991,7 +10991,6 @@ header .hamburgerMobileMenu {
 }
 
 .wrapResultEvent {
-  height: 500px;
   width: 100%;
 }
 
@@ -11198,7 +11197,6 @@ footer {
   height: 200px;
   width: 100%;
   background-color: #656565;
-  margin-top: 30px;
 }
 
 footer .copyright {

@@ -66,31 +66,22 @@
                 </div>
               @endforeach
         </div>
-      </div>
-        <div class="container">
-          <div class="wrapCategorieFront">
-            <div class="card-deck">
-              @foreach ($generi as $genere)
-                <div class="card">
-                  <img src="{{asset("images/sfondo.png")}}" class="card-img-top" alt="...">
-                  <h3 class="text-center card-title">{{$genere->nome}}</h3>
-                </div>
-              @endforeach
-            </div>
-          </div>
+        <div class="">
+
+        </div>
         </div>
         <div class="promo">
-        <div class="container">
-          <div class="jumboDario text-center">
-            <div class="jumboTesto">
-              <h3 class="jumboTitolo">VUOI DARE PIU’ VISIBILITA’ ALLA TUA SERATA DI BALLO?</h3>
-              <h4 class="jumboSottoTitolo">Salvando la tua serata di ballo nel nostro sistema riuscirai Sicuramente ad incrementare
-                il tu pubblico.</h4>
+          <div class="container">
+            <div class="jumboDario text-center">
+              <div class="jumboTesto">
+                <h3 class="jumboTitolo">VUOI DARE PIU’ VISIBILITA’ ALLA TUA SERATA DI BALLO?</h3>
+                <h4 class="jumboSottoTitolo">Salvando la tua serata di ballo nel nostro sistema riuscirai Sicuramente ad incrementare
+                  il tu pubblico.</h4>
+              </div>
+              <a href="#"><button class="btn btn-success btn-lg">AUMENTA LA VISIBILITA' DEL TUO EVENTO</button></a>
             </div>
-            <a href="#"><button class="btn btn-success btn-lg">AUMENTA LA VISIBILITA' DEL TUO EVENTO</button></a>
           </div>
         </div>
-      </div>
 
 
 @endsection

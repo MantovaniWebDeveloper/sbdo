@@ -23,7 +23,7 @@
                   <input id="long" type="hidden" name="longitudine" value="">
               </div>
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                <input class="form-control"type="date" name="data" value="">
+                <input class="form-control"type="date" name="data" id="dataGiorno">
               </div>
               <div class="inputMobile col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                 <input type="submit" class="btnInvioForm btn text-center btn-success" name="salva" value="Cerca">
