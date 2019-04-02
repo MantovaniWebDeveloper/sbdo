@@ -39,7 +39,7 @@
 <!-- ZONA HANDLEBARS!!!-->
 <script id="listaCitta-template" type="text/x-handlebars-template">
   @{{#each this}}
-        <option class="elemento" lng="@{{lng}}" lat="@{{lat}}" datavalue="@{{provincia}}"></option>
+        <option class="elemento" lat="@{{lat}}" long="@{{lng}}" datavalue="@{{provincia}}">@{{provincia}}</option>        
   @{{/each}}
   </datalist>
 

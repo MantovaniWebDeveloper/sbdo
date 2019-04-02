@@ -15274,6 +15274,14 @@ $(document).ready(function () {
     success: function success(data) {
       console.log(data);
       renderDatalistCitta(data);
+      $("#citta-input").on("change", function () {
+        //recupero i valori di latitudine e longitudine da hendlebar
+        var latitudineNoGeo = $('.elemento').attr("lat");
+        var longitudineNoGeo = $('.elemento').attr("long"); //e li stampo negli input nascosti
+
+        $('#lat').val(latitudineNoGeo);
+        $('#long').val(longitudineNoGeo);
+      });
     },
     error: function error(errore) {
       console.log(errore);
@@ -15281,6 +15289,7 @@ $(document).ready(function () {
   }); //funzione per stampare via handlebars le citta nel datalist
 
   function renderDatalistCitta(data) {
+    console.log("sono dentro render");
     var templateBase = $('#listaCitta-template').html();
     var templateCompilato = handlebars_dist_cjs_handlebars__WEBPACK_IMPORTED_MODULE_0___default.a.compile(templateBase);
     var html = templateCompilato(data);

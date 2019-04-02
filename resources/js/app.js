@@ -8,6 +8,7 @@ $(document).ready(function() {
   let oggi = new Date().toISOString().substr(0, 10);
   console.log(oggi);
   $('#dataGiorno').val(oggi);
+
   //jquery front end
 
   var hamburger = $('.hambMenu ');

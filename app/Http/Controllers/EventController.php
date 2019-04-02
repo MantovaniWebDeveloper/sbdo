@@ -34,7 +34,7 @@ class EventController extends Controller
 
     public function search(Request $request)
     {
-      //dd($request);
+      dd($request);
       //recupero i dati ricevuti dal form di ricerca
       //e li passo alla validazione
      $validazioneDatiRicevuti = $request->validate([
@@ -46,7 +46,7 @@ class EventController extends Controller
 
       ]);
 
-    //  dd($validazioneDatiRicevuti);
+    // dd($validazioneDatiRicevuti);
 
       $localita = $validazioneDatiRicevuti["localita"];
       $data = $validazioneDatiRicevuti["data"];
