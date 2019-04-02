@@ -140,8 +140,8 @@ function successo(position) {
         console.log(place.components.village);
         console.log(place.components.county);
         $('#citta-input').val(place.components.village);
-        $('#citta-input').attr("lat", latitudine);
-        $('#citta-input').attr("lng", longitudine);
+        $('#lat').val(latitudine);
+        $('#long').val(longitudine);
       }
     } else if (data.status.code == 402) {
       console.log('hit free-trial daily limit');

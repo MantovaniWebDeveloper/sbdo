@@ -19,6 +19,8 @@
                     <datalist id="cities" style="width:100%">
                       {{--questo sarà riempito da handlebars--}}
                     </datalist>
+                  <input id="lat" type="hidden" name="latitudine" value="">
+                  <input id="long" type="hidden" name="longitudine" value="">
               </div>
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                 <input class="form-control"type="date" name="data" value="">
@@ -37,7 +39,7 @@
 <!-- ZONA HANDLEBARS!!!-->
 <script id="listaCitta-template" type="text/x-handlebars-template">
   @{{#each this}}
-        <option class="elemento" data-id="@{{sigla}}" value="@{{provincia}}"></option>
+        <option class="elemento" lng="@{{lng}}" lat="@{{lat}}" datavalue="@{{provincia}}"></option>
   @{{/each}}
   </datalist>
 
