@@ -15275,9 +15275,11 @@ $(document).ready(function () {
       console.log(data);
       renderDatalistCitta(data);
       $("#citta-input").on("change", function () {
-        //recupero i valori di latitudine e longitudine da hendlebar
-        var latitudineNoGeo = $('.elemento').attr("lat");
-        var longitudineNoGeo = $('.elemento').attr("long"); //e li stampo negli input nascosti
+        //recupero i valori di latitudine e longitudine da hendlebar in modalita no geolocalizzazione
+        var latitudineNoGeo = $("#cities option[value='" + $('#citta-input').val() + "']").attr("data-lat");
+        var longitudineNoGeo = $("#cities option[value='" + $('#citta-input').val() + "']").attr("data-long");
+        console.log(latitudineNoGeo);
+        console.log(longitudineNoGeo); //e li stampo negli input nascosti
 
         $('#lat').val(latitudineNoGeo);
         $('#long').val(longitudineNoGeo);

@@ -15,7 +15,7 @@
             <div class="form-row">
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                  <!-- <input type="text" class="form-control" placeholder="Inserisci la città" name="localita"> -->
-                 <input id="citta-input"class="form-control" lat="" name="localita" list="cities" style="width:100%"/>
+                 <input list="cities" id="citta-input"class="form-control" lat="" name="localita"  style="width:100%" autocomplete="on"/>
                     <datalist id="cities" style="width:100%">
                       {{--questo sarà riempito da handlebars--}}
                     </datalist>
@@ -39,8 +39,8 @@
 <!-- ZONA HANDLEBARS!!!-->
 <script id="listaCitta-template" type="text/x-handlebars-template">
   @{{#each this}}
-        <option class="elemento" lat="@{{lat}}" long="@{{lng}}" datavalue="@{{provincia}}">@{{provincia}}</option>        
+        <option class="elemento"  data-lat="@{{lat}}" data-long="@{{lng}}" value="@{{provincia}}">@{{provincia}}</option>
   @{{/each}}
-  </datalist>
+
 
 </script>
