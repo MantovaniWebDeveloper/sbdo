@@ -13,13 +13,15 @@ class LocalsTableSeeder extends Seeder
      */
     public function run(Faker $datiFake)
     {
-      for ($i=0; $i < 60; $i++) {
+      for ($i=0; $i < 5; $i++) {
+
           $newLocal = new Local();
           $newLocal->nome = $datiFake->company;
           $newLocal->citta = $datiFake->city;
           $newLocal->provincia = $datiFake->citySuffix;
           $newLocal->indirizzo = $datiFake->streetAddress;
           $newLocal->cap = rand(1,100);
+
           //salvo il tutto nel db
           $newLocal->save();
 

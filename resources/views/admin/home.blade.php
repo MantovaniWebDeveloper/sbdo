@@ -57,14 +57,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th class="text-center">1</th>
-              <td class="text-center">Mark</td>
-              <td class="text-center">Otto</td>
-              <td class="text-center">@mdo</td>
-              <td class="text-center"><button class="btn btn-success">Modica</button></td>
-              <td class="text-center"><button class="btn btn-danger">Elimina</button></td>
-            </tr>
+            @foreach ($eventi as  $evento)
+              <tr>
+                <th class="text-center">{{$evento->id}}</th>
+                <td class="text-center">{{$evento->nomeEvento}}</td>
+                <td class="text-center">{{$evento->data_svolgimento}}</td>
+                <td class="text-center">{{$evento->organizzatore}}</td>
+                <td class="text-center"><button class="btn btn-success">Modica</button></td>
+                <td class="text-center"><button class="btn btn-danger">Elimina</button></td>
+              </tr>
+            @endforeach
           </tbody>
         </table>
       </div>

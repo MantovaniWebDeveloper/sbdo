@@ -18,4 +18,4 @@ Auth::routes();
 Route::resource('event','EventController');
 Route::get('/eventi','EventController@search')->name('ricercaEventi');
 //rotta privata per la parte amministrativa admin
-Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+Route::get('/admin', 'Admin\EventController@index')->name('admin')->middleware('auth');
