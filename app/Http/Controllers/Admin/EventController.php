@@ -25,7 +25,9 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-        //
+        dd($request);
+
+        return redirect()->route('admin.index');
     }
 
     public function show($id)

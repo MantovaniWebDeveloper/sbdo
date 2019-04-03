@@ -46,7 +46,8 @@
       <div id="contentDashBoard">
         <div class="container">
           <h2 class="titleForm">Crea evento</h2>
-          <form class="" action="" method="post">
+          <form class="" action="{{route('store')}}" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="row">
               <div class="col-6">
                 <label for="nome evento" class="text-light">Nome evento</label>
@@ -58,38 +59,21 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-2">
+              <div class="col-6">
                 <label for="data_evento" class="text-light">Data del evento</label>
                 <input type="date" class="form-control"  >
               </div>
-              <div class="col-4">
-                <label for="indirizzo" class="text-light">Indirizzo</label>
-                <input type="text" class="form-control" placeholder="Inserisci indirizzo" >
-              </div>
-              <div class="col-2">
-                <label for="numero_civico" class="text-light">N.Civico</label>
-                <input type="text" class="form-control" placeholder="Numero civico" >
-              </div>
-              <div class="col-4">
-                <label for="cap" class="text-light">cap</label>
-                <input type="text" class="form-control" placeholder="Inserisci cap" >
+              <div class="col-6">
+                <label for="locale" class="text-light">Segli il locale</label>
+                <select class="form-control" name="">
+                  <option value=""></option>
+                </select>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6">
-                <label for="provincia" class="text-light">Provincia</label>
-                <input type="text" class="form-control" placeholder="Inserisci provincia" >
-              </div>
-              <div class="col-6">
-                <label for="città" class="text-light">Città</label>
-                <input type="text" class="form-control" placeholder="Inserisci città" >
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="locale" class="text-light">Segli il locale</label>
-              <select class="form-control" name="">
-                <option value=""></option>
-              </select>
+            <div class="custom-file mb-3 mt-3">
+              <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+              <label class="custom-file-label" for="validatedCustomFile">Carica locandina...</label>
+              <div class="invalid-feedback">Example invalid custom file feedback</div>
             </div>
             <div class="form-group">
               <label for="descrizione" class="text-light">Descrizione</label>
@@ -97,7 +81,11 @@
 
               </textarea>
             </div>
-            <input class="btn btn-success btn-lg"type="submit" name="" value="Salva">
+            <div class="form-group">
+              <label for="costo" class="text-light">Costo ingresso</label>
+              <input class="form-control"type="text" name="" value="">
+            </div>
+            <input class="col-12 btn btn-success btn-lg"type="submit" name="" value="Salva">
           </form>
         </div>
 
