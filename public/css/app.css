@@ -10723,6 +10723,13 @@ a.text-dark:focus {
   background-color: #2e323a;
 }
 
+.titleForm {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
 header {
   position: relative;
   height: 80px;

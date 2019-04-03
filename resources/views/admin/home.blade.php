@@ -14,7 +14,7 @@
           </div>
           <div id="1"class="dropDownMenu">
             <div class="wrapSubTitle">
-              <a href="#"><h5 class="subTitleNav">Crea</h5></a>
+              <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
               <a href="#"><h5 class="subTitleNav">Lista</h5></a>
             </div>
           </div>

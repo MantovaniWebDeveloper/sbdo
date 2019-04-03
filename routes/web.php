@@ -17,5 +17,8 @@ Auth::routes();
 
 Route::resource('event','EventController');
 Route::get('/eventi','EventController@search')->name('ricercaEventi');
-//rotta privata per la parte amministrativa admin
-Route::get('/admin', 'Admin\EventController@index')->name('admin')->middleware('auth');
+//gruppo di rotte amministrative con resource per la parte amministrativa admin
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function(){
+  Route::resource('/','EventController');
+  Route::get('/events','EventController@create')->name('creaEvento');
+});
