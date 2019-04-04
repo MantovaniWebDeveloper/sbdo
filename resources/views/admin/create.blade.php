@@ -88,6 +88,14 @@
                 <label for="costo" class="text-light">Costo ingresso</label>
                 <input name="costo_ingresso" class="form-control"type="text" name="" value="">
               </div>
+              <div class="col-6">
+                @foreach ($generi as  $genere)
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="generi[]" value="{{$genere->id}}">
+                    <label class="form-check-label text-light" for="inlineCheckbox1">{{$genere->nome}}</label>
+                  </div>
+                @endforeach
+              </div>
             </div>
             <input class="col-12 btn btn-success btn-lg"type="submit" name="" value="Salva">
           </form>

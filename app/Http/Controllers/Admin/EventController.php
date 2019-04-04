@@ -23,8 +23,9 @@ class EventController extends Controller
     public function create()
     {
         $locali = Local::all();
+        $generi = Genre::all();
 
-        return view('admin.create', compact('locali'));
+        return view('admin.create', compact('locali','generi'));
     }
 
     public function store(Request $request)
@@ -41,8 +42,13 @@ class EventController extends Controller
         $nuovoEvento = new Event();
         $nuovoEvento->fill($dataEvento);
         $nuovoEvento->save();
+        //salvataggio nella tabella pivot del molti a molti
+        foreach($dataEvento['generi'] as $idGenere) {
+          $nuovoEvento->generi()->attach($idGenere);
+        }
 
-        return redirect()->route('index');
+
+        return redirect()->route('index', compact('nuovoEvento'));
     }
 
     public function show($id)
