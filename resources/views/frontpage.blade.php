@@ -9,7 +9,8 @@
                   <div class="wrapReslutContentInterno">
                     <div class="row">
                     <div class="imgCategory col-12 col-sm-12 col-md-4 col-lg-4">
-                      <img class="img-fluid" src="{{asset($evento->locandina)}}" alt="">
+                      <!-- PEr recupeare img da storage devo fare cosi asset('storage/' . $evento->locandina)-->
+                      <img class="img-fluid" src="{{asset('storage/' . $evento->locandina)}}" alt="">
 
                     </div>
                     <div class="contentText col-12 col-sm-12 col-md-8 col-lg-8">

@@ -20,5 +20,5 @@ Route::get('/eventi','EventController@search')->name('ricercaEventi');
 //gruppo di rotte amministrative con resource per la parte amministrativa admin
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function(){
   Route::resource('/','EventController');
-  Route::get('/events','EventController@create')->name('creaEvento');
+  Route::get('/crea_evento','EventController@create')->name('creaEvento');
 });
