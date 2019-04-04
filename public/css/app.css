@@ -10730,6 +10730,12 @@ a.text-dark:focus {
   padding-top: 5px;
 }
 
+.checkGeneri {
+  height: 94px;
+  display: flex;
+  align-items: center;
+}
+
 header {
   position: relative;
   height: 80px;
@@ -11078,6 +11084,10 @@ header .hamburgerMobileMenu {
 
 .costoBox {
   text-align: right;
+}
+
+.locandinaInt {
+  max-height: 300px;
 }
 
 .contatti {

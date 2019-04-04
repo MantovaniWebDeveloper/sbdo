@@ -1,4 +1,4 @@
-<?php 
+<?php
 return [
 	  [
 		"sigla" => "AG",
@@ -106,8 +106,8 @@ return [
 		"sigla" => "BO",
 		"capoluogo" => true,
 		"provincia" => "Bologna",
-		"lng" => "13.95981998",
-		"lat" => "42.21702314",
+		"lng" => "11.327591",
+		"lat" => "44.498955",
 		"id_regione" => "5"
 	  ],
 	  [
@@ -256,8 +256,8 @@ return [
 	  [
 		"sigla" => "FE",
 		"provincia" => "Ferrara",
-		"lng" => "11.61868934",
-		"lat" => "44.83599085",
+		"lng" => " 11.6204",
+		"lat" => "44.8379",
 		"id_regione" => "5"
 	  ],
 	  [

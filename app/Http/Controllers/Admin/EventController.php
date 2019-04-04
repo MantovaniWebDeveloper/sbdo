@@ -48,7 +48,7 @@ class EventController extends Controller
         }
 
 
-        return redirect()->route('index', compact('nuovoEvento'));
+        return redirect()->route('index');
     }
 
     public function show($id)
@@ -58,7 +58,11 @@ class EventController extends Controller
 
     public function edit($id)
     {
-        //
+        $evento = Event::find($id); // metodo con find
+        $locali = Local::all();
+        $generi = Genre::all();
+
+        return view('admin.update', compact('evento','locali','generi'));
     }
 
     public function update(Request $request, $id)

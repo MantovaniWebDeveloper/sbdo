@@ -12,7 +12,7 @@
             <div class="wrapReslutContentInterno">
               <div class="row">
               <div class="imgCategory col-12 col-sm-12 col-md-4 col-lg-4">
-                <img class="img-fluid" src="{{asset($evento->locandina)}}" alt="">
+                <img class="img-fluid" src="{{asset('storage/' . $evento->locandina)}}" alt="">
 
               </div>
               <div class="contentText col-12 col-sm-12 col-md-8 col-lg-8">
@@ -24,6 +24,7 @@
                     <span>costo ingresso: {{$evento->costo_ingresso}} €</span>
 
                   @endif
+                  
                   <div>
                     <i class="fas fa-map-marker-alt pr-2"></i>
                     <small>{{$evento->nomeLocale}}</small>

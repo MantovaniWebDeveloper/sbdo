@@ -50,18 +50,19 @@
             @csrf
             <div class="row">
               <div class="col-6">
+                <input type="hidden" name="" value="{{$evento->id}}">
                 <label for="nome evento" class="text-light">Nome evento</label>
-                <input name="nomeEvento" type="text" class="form-control"  placeholder="Inserisci nome evento..">
+                <input name="nomeEvento" type="text" class="form-control"  placeholder="{{$evento->nomeEvento}}">
               </div>
               <div class="col-6">
                 <label for="organizzatore" class="text-light">Organizzatore</label>
-                <input name="organizzatore" type="text" class="form-control"  placeholder="Inserisci organizzatore..">
+                <input name="organizzatore" type="text" class="form-control"  placeholder="{{$evento->organizzatore}}">
               </div>
             </div>
             <div class="row">
               <div class="col-6">
                 <label for="data_evento" class="text-light">Data del evento</label>
-                <input name="data_svolgimento" type="date" class="form-control"  >
+                <input name="data_svolgimento" type="date" class="form-control">
               </div>
               <div class="col-6">
                 <label for="locale" class="text-light">Segli il locale</label>
@@ -80,13 +81,13 @@
             <div class="form-group">
               <label for="descrizione" class="text-light">Descrizione</label>
               <textarea class="form-control" name="descrizione" rows="8" cols="80">
-
+                {{$evento->descrizione}}
               </textarea>
             </div>
             <div class="row mb-2">
               <div class="col-6">
                 <label for="costo" class="text-light">Costo ingresso</label>
-                <input name="costo_ingresso" class="form-control"type="text" name="" value="">
+                <input name="costo_ingresso" class="form-control"type="text" name="" value="" placeholder="{{$evento->costo_ingresso}}">
               </div>
               <div class="col-6">
                 @foreach ($generi as  $genere)
@@ -104,5 +105,4 @@
       </div>
     </div>
   </div>
-
 @endsection

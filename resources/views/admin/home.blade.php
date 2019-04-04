@@ -15,7 +15,6 @@
           <div id="1"class="dropDownMenu">
             <div class="wrapSubTitle">
               <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
-              <a href="#"><h5 class="subTitleNav">Lista</h5></a>
             </div>
           </div>
         </div>
@@ -63,7 +62,7 @@
                 <td class="text-center">{{$evento->nomeEvento}}</td>
                 <td class="text-center">{{$evento->data_svolgimento}}</td>
                 <td class="text-center">{{$evento->organizzatore}}</td>
-                <td class="text-center"><button class="btn btn-success">Modica</button></td>
+                <td class="text-center"><a href="{{ route('modificaEvento', $evento->id)}}"><button class="btn btn-success">Modica</button></a></td>
                 <td class="text-center"><button class="btn btn-danger">Elimina</button></td>
               </tr>
             @endforeach

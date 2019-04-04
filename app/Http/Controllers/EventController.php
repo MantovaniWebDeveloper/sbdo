@@ -34,7 +34,7 @@ class EventController extends Controller
 
     public function search(Request $request)
     {
-      //dd($request);
+      //dd($request->all());
       //recupero i dati ricevuti dal form di ricerca
       //e li passo alla validazione
      $validazioneDatiRicevuti = $request->validate([
