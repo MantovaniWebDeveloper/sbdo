@@ -63,7 +63,12 @@
                 <td class="text-center">{{$evento->data_svolgimento}}</td>
                 <td class="text-center">{{$evento->organizzatore}}</td>
                 <td class="text-center"><a href="{{ route('modificaEvento', $evento->id)}}"><button class="btn btn-success">Modica</button></a></td>
-                <td class="text-center"><button class="btn btn-danger">Elimina</button></td>
+                <td class="text-center">
+                  <form class="" action="{{ route('cancellaEvento', $evento->id) }}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <input class="btn btn-danger" type="submit" name="" value="Elimina">
+                </form>
               </tr>
             @endforeach
           </tbody>

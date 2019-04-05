@@ -17,8 +17,8 @@ class CreateEventGenreTable extends Migration
           $table->integer('event_id')->unsigned();
           $table->integer('genre_id')->unsigned();
 
-          $table->foreign('event_id')->references('id')->on('events');
-          $table->foreign('genre_id')->references('id')->on('genres');
+          $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+          $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
 
           $table->primary(['event_id','genre_id']);
         });

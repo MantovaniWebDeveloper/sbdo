@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateEventsTable extends Migration
+class UpdateEvent3Table extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class UpdateEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-          $table->unsignedInteger('locale_id');
-          $table->foreign('locale_id')->references('id')->on('locals')->onDelete('cascade');
+            $table->string("locandina",200);
         });
     }
 

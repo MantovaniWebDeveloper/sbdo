@@ -67,11 +67,32 @@ class EventController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        //recupero evento da modificare tramite id
+        $evento = Event::find($id);
+        //dd($request->all());
+
+        //recupero tutti i dati
+        $dataEvento = $request->all();
+
+        //creo uno slug dal nome del evento con Str::slug
+        //$dataEvento['slug'] = Str::slug($dataEvento['nomeEvento']);
+        //risolvere problema aggiornamento img locandina
+      //  $dataEvento['locandina'] = $locandina;
+
+        //gli metto dentro al dataEvento la locandina caricata
+        //aggiorno l'evento esistente
+        $evento->update($dataEvento);
+
+        return redirect()->route('index');
     }
 
     public function destroy($id)
     {
-        //
+      // metodo con find trovo tramite id
+      $evento = Event::find($id);
+      //elimino */
+      $evento->delete();
+
+      return redirect()->route('index');
     }
 }

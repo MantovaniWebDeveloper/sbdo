@@ -46,17 +46,17 @@
       <div id="contentDashBoard">
         <div class="container">
           <h2 class="titleForm">Crea evento</h2>
-          <form class="" action="{{route('store')}}" method="post" enctype="multipart/form-data">
+          <form class="" action="{{route('updateEvento', $evento->id)}}" method="put" enctype="multipart/form-data">
             @csrf
             <div class="row">
               <div class="col-6">
                 <input type="hidden" name="" value="{{$evento->id}}">
                 <label for="nome evento" class="text-light">Nome evento</label>
-                <input name="nomeEvento" type="text" class="form-control"  placeholder="{{$evento->nomeEvento}}">
+                <input name="nomeEvento" type="text" class="form-control"  value="{{$evento->nomeEvento}}">
               </div>
               <div class="col-6">
                 <label for="organizzatore" class="text-light">Organizzatore</label>
-                <input name="organizzatore" type="text" class="form-control"  placeholder="{{$evento->organizzatore}}">
+                <input name="organizzatore" type="text" class="form-control"  value="{{$evento->organizzatore}}">
               </div>
             </div>
             <div class="row">
@@ -87,7 +87,7 @@
             <div class="row mb-2">
               <div class="col-6">
                 <label for="costo" class="text-light">Costo ingresso</label>
-                <input name="costo_ingresso" class="form-control"type="text" name="" value="" placeholder="{{$evento->costo_ingresso}}">
+                <input name="costo_ingresso" class="form-control"type="text" name="" value="{{$evento->costo_ingresso}}">
               </div>
               <div class="col-6">
                 @foreach ($generi as  $genere)

@@ -22,4 +22,7 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function()
   Route::resource('/','EventController');
   Route::get('/crea_evento','EventController@create')->name('creaEvento');
   Route::get('/modifica_evento/{id}','EventController@edit')->name('modificaEvento');
+  Route::get('/update_evento/{id}','EventController@update')->name('updateEvento');
+  Route::delete('/destroy_evento/{id}','EventController@destroy')->name('cancellaEvento');
+
 });
