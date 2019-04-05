@@ -25,7 +25,7 @@ class EventController extends Controller
         $locali = Local::all();
         $generi = Genre::all();
 
-        return view('admin.create', compact('locali','generi'));
+        return view('admin.evento.create', compact('locali','generi'));
     }
 
     public function store(Request $request)
@@ -62,7 +62,7 @@ class EventController extends Controller
         $locali = Local::all();
         $generi = Genre::all();
 
-        return view('admin.update', compact('evento','locali','generi'));
+        return view('admin.evento.update', compact('evento','locali','generi'));
     }
 
     public function update(Request $request, $id)
