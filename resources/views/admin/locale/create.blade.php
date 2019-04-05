@@ -66,7 +66,7 @@
         </div>
         <input id="btnLoc" class="col-12 btn btn-success btn-lg mb-3"type="submit"  value="Salva posizione locale">
 
-        <form class="" action="{{route('store')}}" method="post" >
+        <form class="" action="{{route('salvaLocale')}}" method="post" >
           @csrf
           <div class="row">
             <div class="col-6">
@@ -75,22 +75,24 @@
             </div>
             <div class="col-6">
               <label for="Citta" class="text-light">Citta</label>
-              <input id="citta" name="citta" type="text" class="form-control"  placeholder="Inserisci citta..">
+              <input id="cittaCrea" name="citta" type="text" class="form-control"  placeholder="Inserisci citta..">
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-4">
               <label for="provincia" class="text-light">Provincia</label>
-              <input id="provincia" name="provincia" class="form-control"type="text"  value="" placeholder="Inserisci provincia..">
+              <input id="provinciaCrea" name="provincia" class="form-control"type="text"  value="" placeholder="Inserisci provincia..">
             </div>
             <div class="col-4">
               <label for="indirizzo" class="text-light">Indirizzo</label>
-              <input id="indirizzo" name="indirizzo" class="form-control"type="text"  value="" placeholder="Inserisci indirizzo..">
+              <input id="indirizzoCrea" name="indirizzo" class="form-control"type="text"  value="" placeholder="Inserisci indirizzo..">
             </div>
             <div class="col-4">
               <label for="cap" class="text-light">cap</label>
-              <input id="cap"name="cap" class="form-control"type="text"  value="" placeholder="Inserisci cap..">
+              <input id="capCrea"name="cap" class="form-control"type="text"  value="" placeholder="Inserisci cap..">
             </div>
+            <input id="latCrea" type="hidden" name="latitudine" value="">
+            <input id="lngCrea" type="hidden" name="longitudine" value="">
           </div>
           <input class="col-12 btn btn-success btn-lg"type="submit"  value="Salva">
         </form>

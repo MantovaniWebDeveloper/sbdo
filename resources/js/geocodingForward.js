@@ -22,6 +22,13 @@ $(document).ready(function() {
                 var place = data.results[0];
                 console.log(place.geometry.lat);
                 console.log(place.geometry.lng);
+                $('#cittaCrea').val(citta);
+                $('#provinciaCrea').val(provincia);
+                $('#indirizzoCrea').val(indirizzo);
+                $('#capCrea').val(cap);
+                $('#latCrea').val(place.geometry.lat);
+                $('#lngCrea').val(place.geometry.lng);
+
             }
         } else if (data.status.code == 402) {
             console.log('hit free-trial daily limit');

@@ -18,7 +18,15 @@ class LocalController extends Controller
     }
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        $dataLocale = $request->all();
+
+        $nuovoLocale = new Local();
+        $nuovoLocale->fill($dataLocale);
+        $nuovoLocale->save();
+
+        return redirect()->route('index');
     }
     public function show(Local $local)
     {
