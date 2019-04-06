@@ -11050,6 +11050,13 @@ header .hamburgerMobileMenu {
   height: 200px;
 }
 
+.quadroGenere {
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  border: 2px solid #fff;
+}
+
 @media (max-width: 991.98px) {
   .wrapResultEvent #container_result .resultContent {
     width: 100%;
@@ -11057,6 +11064,12 @@ header .hamburgerMobileMenu {
 
   .sidebar {
     display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .quadroGenere {
+    width: 100%;
   }
 }
 

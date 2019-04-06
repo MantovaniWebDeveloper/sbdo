@@ -11,13 +11,7 @@
   </head>
   <body>
     @yield('content')
-    <footer>
-      <div class="container">
-        <div class="copyright">
-          <p>&copy; Dario Mantovani - 2019</p>
-        </div>
-      </div>
-    </footer>
+  
     <script src="{{ asset('js/geolocation.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/form.js') }}"></script>

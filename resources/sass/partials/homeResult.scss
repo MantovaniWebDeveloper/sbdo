@@ -37,6 +37,14 @@
   height: 200px;
 }
 
+
+  .quadroGenere {
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    border: 2px solid #fff;
+  }
+
 @include media-breakpoint-down(md) {
   .wrapResultEvent {
     #container_result {
@@ -48,10 +56,13 @@
   .sidebar {
     display: none;
   }
+
 }
 
 @include media-breakpoint-down(sm) {
-
+  .quadroGenere {
+    width: 100%;
+  }
 }
 @include media-breakpoint-down(xs) {
 .titoloHomeResult {
