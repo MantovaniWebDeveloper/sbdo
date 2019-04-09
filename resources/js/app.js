@@ -4,6 +4,7 @@ require('./bootstrap');
 
 
 $(document).ready(function() {
+
   //recuperare data odierna e poi inserita nel inputa della data del search
   let oggi = new Date().toISOString().substr(0, 10);
   console.log(oggi);

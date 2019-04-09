@@ -15,10 +15,15 @@
             <div class="form-row">
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                  <!-- <input type="text" class="form-control" placeholder="Inserisci la città" name="localita"> -->
-                 <input list="cities" id="citta-input"class="form-control" lat="" name="localita"  style="width:100%" autocomplete="on"/>
+            <!--     <input list="cities" id="citta-input"class="form-control" lat="" name="localita"  style="width:100%" autocomplete="on"/>
                     <datalist id="cities" style="width:100%">
                       {{--questo sarà riempito da handlebars--}}
-                    </datalist>
+                    </datalist> -->
+                <!--    <select id="cities" class="form-control citta-input" lat="" name="localita"  style="width:100%">
+                </select>-->
+                <select id="cities" class="citta-input" style="width:100%; "name="localita">
+
+                </select>
                   <input id="lat" type="hidden" name="latitudine" value="">
                   <input id="long" type="hidden" name="longitudine" value="">
               </div>
@@ -41,6 +46,4 @@
   @{{#each this}}
         <option class="elemento"  data-lat="@{{lat}}" data-long="@{{lng}}" value="@{{provincia}}">@{{provincia}}</option>
   @{{/each}}
-
-
 </script>

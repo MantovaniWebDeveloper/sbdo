@@ -1,12 +1,13 @@
-var $ = require('jquery');
 import Handlebars from 'handlebars/dist/cjs/handlebars';
+import $ from 'jquery';
+import select2 from 'select2';
 
 $(document).ready(function() {
   //alert('sono vivo');
 
     //alert('sono vivo');
     $.ajax({
-      url: 'config/api/cities',
+      url: 'http://127.0.0.1:8000/api/cities',
       type:'GET',
       success: function(data){
         console.log(data);
@@ -28,10 +29,10 @@ $(document).ready(function() {
     }
 
     function recuperoCordinateSenzaGeo() {
-      $( "#citta-input" ).on( "change", function() {
+      $( "#cities" ).on( "change", function() {
           //recupero i valori di latitudine e longitudine da hendlebar in modalita no geolocalizzazione
-          var latitudineNoGeo = $("#cities option[value='" + $('#citta-input').val() + "']").attr("data-lat");
-          var longitudineNoGeo = $("#cities option[value='" + $('#citta-input').val() + "']").attr("data-long");
+          var latitudineNoGeo = $("#cities option[value='" + $('#cities').val() + "']").attr("data-lat");
+          var longitudineNoGeo = $("#cities option[value='" + $('#cities').val() + "']").attr("data-long");
           console.log(latitudineNoGeo);
           console.log(longitudineNoGeo)
           //e li stampo negli input nascosti
@@ -40,4 +41,8 @@ $(document).ready(function() {
         });
     }
 
+});
+
+$('.citta-input').select2({
+  height: '100%',
 });

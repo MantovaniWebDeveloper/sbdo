@@ -27,7 +27,7 @@ function successo(position) {
                 var place = data.results[0];
                 console.log(place.components.village);
                 console.log(place.components.county);
-                $('#citta-input').val(place.components.village);
+                $('#cities').val(place.components.village);
                 $('#lat').val(latitudine);
                 $('#long').val(longitudine);
             }
