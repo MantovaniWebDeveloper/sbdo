@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     //alert('sono vivo');
     $.ajax({
-      url: 'https://www.staseraballiamo.it/api/cities',
+      url: 'config/api/cities',
       type:'GET',
       success: function(data){
         console.log(data);
