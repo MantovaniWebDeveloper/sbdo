@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     //alert('sono vivo');
     $.ajax({
-      url: 'http://127.0.0.1:8000/api/cities',
+      url: 'config/api/cities',
       type:'GET',
       success: function(data){
         console.log(data);
