@@ -17,7 +17,8 @@
                 <select id="cities" class="citta-input" style="width:100%; "name="localita">
 
                 </select>
-                  <input id="citiesNascosto" class="form-control" type="text" name="" value="" style="display:none;">
+                  <p id="ricercaGeo" class="mt-3">Ricerca con geolocalizzazione</p>
+                  <input id="citiesNascosto" class="form-control mt-3" type="text" name="localita" value="" style="display:none;">
                   <input id="lat" type="hidden" name="latitudine" value="">
                   <input id="long" type="hidden" name="longitudine" value="">
               </div>

@@ -10941,6 +10941,11 @@ header .hamburgerMobileMenu {
   text-align: center;
 }
 
+.wrapTotale .sfondoFront .opacita .wrapForm #ricercaGeo {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .wrapTotale .sfondoFront .opacita .wrapForm .select2-container .select2-selection--single {
   height: 36px;
 }
