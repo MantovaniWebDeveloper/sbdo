@@ -1,8 +1,11 @@
 const opencage = require('opencage-api-client');
+import $ from 'jquery';
+
 
 if (navigator.geolocation) {
     // supported
     console.log("SUPPORTATO");
+
     navigator.geolocation.getCurrentPosition(successo, fallito);
 } else {
     // not-supported
@@ -27,7 +30,10 @@ function successo(position) {
                 var place = data.results[0];
                 console.log(place.components.village);
                 console.log(place.components.county);
-                $('#cities').val(place.components.village);
+                //$('#select2-search__field').val(place.components.village);
+                $('.select2-selection--single').hide();
+                $('#citiesNascosto').show();
+                $('#citiesNascosto').val(place.components.village);
                 $('#lat').val(latitudine);
                 $('#long').val(longitudine);
             }
