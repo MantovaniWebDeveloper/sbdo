@@ -3,6 +3,7 @@ import $ from 'jquery';
 import select2 from 'select2';
 
 $('#ricercaGeo').on('click',function(){
+  
   if (navigator.geolocation) {
       // supported
       console.log("SUPPORTATO");
@@ -32,7 +33,7 @@ $('#ricercaGeo').on('click',function(){
                   console.log(place.components.village);
                   console.log(place.components.county);
                   //$('#select2-search__field').val(place.components.village);
-                  $('.citta-input').prop( "disabled" , true ); 
+                  $('.citta-input').prop( "disabled" , true );
                   $('#citiesNascosto').show();
                   $('#citiesNascosto').val(place.components.village);
                   $('#lat').val(latitudine);
