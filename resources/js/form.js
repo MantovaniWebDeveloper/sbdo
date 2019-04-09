@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars/dist/cjs/handlebars';
 import $ from 'jquery';
-
+import select2 from 'select2';
 
 $(document).ready(function() {
   //alert('sono vivo');
@@ -41,4 +41,8 @@ $(document).ready(function() {
         });
     }
 
+});
+
+$('.citta-input').select2({
+  height: '100%',
 });

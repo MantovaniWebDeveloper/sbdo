@@ -19,7 +19,10 @@
                     <datalist id="cities" style="width:100%">
                       {{--questo sarà riempito da handlebars--}}
                     </datalist> -->
-                <select id="cities" class="form-control citta-input" lat="" name="localita"  style="width:100%">
+                <!--    <select id="cities" class="form-control citta-input" lat="" name="localita"  style="width:100%">
+                </select>-->
+                <select id="cities" class="citta-input" style="width:100%; "name="localita">
+
                 </select>
                   <input id="lat" type="hidden" name="latitudine" value="">
                   <input id="long" type="hidden" name="longitudine" value="">
