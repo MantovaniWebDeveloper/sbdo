@@ -33,10 +33,13 @@
             font-weight: bold;
             text-align: center;
           }
+          .btnWrap {
+            padding-top: 31px;
+          }
           #ricercaGeo {
             font-weight: bold;
             cursor: pointer;
-        
+
           }
           .select2-container .select2-selection--single {
             height: 36px;
@@ -51,15 +54,18 @@
 
 @include media-breakpoint-down(sm) {
   .wrapTotale {
-    height: 350px;
+    height: 100vh;
     .sfondoFront {
-      height: 400px;
+      height: 100vh;
       .opacita {
-        height: 400px;
+        height: 100vh;
         .wrapForm {
-          height: 400px;
+          height: 100vh;
           .motto {
             font-size: 20px;
+            .lead {
+              display: none;
+            }
           }
           p {
             font-size: 15px;

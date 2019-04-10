@@ -14,19 +14,19 @@
 
             <div class="form-row">
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <label for="citta" class="text-light">Seleziona la località:</label>
                 <select id="cities" class="citta-input" style="width:100%; "name="localita">
 
                 </select>
-                <button id="ricercaGeo" class="mt-2"type="button" name="button">Ricerca citta con geolocalizzazione</button>
-                  <input id="citiesNascosto" class="form-control mt-3" type="text" name="localita" value="" style="display:none;">
                   <input id="lat" type="hidden" name="latitudine" value="">
                   <input id="long" type="hidden" name="longitudine" value="">
               </div>
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <label for="citta" class="text-light">Seleziona la data:</label>
                 <input class="form-control"type="date" name="data" id="dataGiorno">
               </div>
-              <div class="inputMobile col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                <input type="submit" class="btnInvioForm btn text-center btn-success" name="salva" value="Cerca">
+              <div class="inputMobile col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btnWrap">
+                <input type="submit" class="btnInvioForm btn text-center btn-success mb-3" name="salva" value="Cerca">
               </div>
             </div>
           </form>

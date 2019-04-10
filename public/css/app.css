@@ -10941,6 +10941,10 @@ header .hamburgerMobileMenu {
   text-align: center;
 }
 
+.wrapTotale .sfondoFront .opacita .wrapForm .btnWrap {
+  padding-top: 31px;
+}
+
 .wrapTotale .sfondoFront .opacita .wrapForm #ricercaGeo {
   font-weight: bold;
   cursor: pointer;
@@ -10956,23 +10960,27 @@ header .hamburgerMobileMenu {
 
 @media (max-width: 767.98px) {
   .wrapTotale {
-    height: 350px;
+    height: 100vh;
   }
 
   .wrapTotale .sfondoFront {
-    height: 400px;
+    height: 100vh;
   }
 
   .wrapTotale .sfondoFront .opacita {
-    height: 400px;
+    height: 100vh;
   }
 
   .wrapTotale .sfondoFront .opacita .wrapForm {
-    height: 400px;
+    height: 100vh;
   }
 
   .wrapTotale .sfondoFront .opacita .wrapForm .motto {
     font-size: 20px;
+  }
+
+  .wrapTotale .sfondoFront .opacita .wrapForm .motto .lead {
+    display: none;
   }
 
   .wrapTotale .sfondoFront .opacita .wrapForm p {
