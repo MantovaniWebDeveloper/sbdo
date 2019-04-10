@@ -10755,14 +10755,6 @@ a.text-dark:focus {
 
   #menuDashBoardMobile .dropDownMenu .wrapSubTitle {
     width: 100%;
-    margin-left: 25px;
-  }
-
-  #menuDashBoardMobile .dropDownMenu .wrapSubTitle .subTitleNav {
-    padding-top: 10px;
-    width: 100%;
-    height: 100%;
-    margin-left: 20px;
   }
 
   #wrapDashBoard #menuDashBoard {
@@ -10799,13 +10791,6 @@ a.text-dark:focus {
   #menuDashBoardMobile .dropDownMenu .wrapSubTitle {
     width: 100%;
     margin-left: 25px;
-  }
-
-  #menuDashBoardMobile .dropDownMenu .wrapSubTitle .subTitleNav {
-    padding-top: 10px;
-    width: 100%;
-    height: 100%;
-    margin-left: 20px;
   }
 
   #wrapDashBoard #menuDashBoard {
