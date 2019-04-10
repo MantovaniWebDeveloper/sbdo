@@ -1,3 +1,6 @@
+#menuDashBoardMobile {
+  display: none;
+}
 #wrapDashBoard {
   display: flex;
   height: 100vh;
@@ -18,6 +21,7 @@
         color:#716f6f;
       }
     }
+
     .dropDownMenu {
       display: none;
       height: 100px;
@@ -49,5 +53,93 @@
     height: 100%;
     width: 80%;
     background-color: #2e323a;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+#menuDashBoardMobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .wrapTitle {
+      width: 100%;
+      height: 50px;
+      margin-left: 20px;
+      .titleNav {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 10px;
+        color:#716f6f;
+      }
+    }
+    .dropDownMenu {
+      display: none;
+      height: 100px;
+      .wrapSubTitle {
+        width: 100%;
+        margin-left: 25px;
+        .subTitleNav {
+          padding-top: 10px;
+          width: 100%;
+          height: 100%;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+#wrapDashBoard {
+
+  #menuDashBoard {
+    display: none;
+  }
+  #contentDashBoard {
+    height: 100%;
+    width: 100%;
+    background-color: #2e323a;
+  }
+}
+
+
+}
+@include media-breakpoint-down(xs) {
+  #menuDashBoardMobile {
+      .wrapTitle {
+        width: 100%;
+        height: 50px;
+        .titleNav {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          padding: 5px;
+          color:#716f6f;
+          font-size: 13px;
+        }
+      }
+      .dropDownMenu {
+        display: none;
+        height: 100px;
+        .wrapSubTitle {
+          width: 100%;
+          margin-left: 25px;
+          .subTitleNav {
+            padding-top: 10px;
+            width: 100%;
+            height: 100%;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  #wrapDashBoard {
+
+    #menuDashBoard {
+      display: none;
+    }
+    #contentDashBoard {
+      height: 100%;
+      width: 100%;
+      background-color: #2e323a;
+    }
   }
 }

@@ -9,7 +9,7 @@
             </div>
 
           <form class="" action="{{route('ricercaEventi')}}" method="get">
-            @csrf
+            {{csrf_field()}}
             @method('GET')
 
             <div class="form-row">

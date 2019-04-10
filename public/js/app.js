@@ -36581,6 +36581,11 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 $(document).ready(function () {
   //recuperare data odierna e poi inserita nel inputa della data del search
   var oggi = new Date().toISOString().substr(0, 10);
