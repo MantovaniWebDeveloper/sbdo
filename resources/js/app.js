@@ -31,8 +31,34 @@ $(document).ready(function() {
   });
 
 
+  $(".eventoDesktop").on("click",function(){
+      //alert('ciao');
+      $('#uno').toggle();
+  });
 
+  $(".localeDesktop").on("click",function(){
+      //alert('ciao');
+      $('#due').toggle();
 
+  });
+  $(".genereDesktop").on("click",function(){
+      //alert('ciao');
+
+  });
+  $(".eventoMobile").on("click",function(){
+      //alert('ciao');
+      $('#unoMobile').toggle();
+  });
+
+  $(".localeMobile").on("click",function(){
+      //alert('ciao');
+      $('#dueMobile').toggle();
+
+  });
+  $(".genereMobile").on("click",function(){
+      //alert('ciao');
+
+  });
 
 
 
@@ -41,11 +67,12 @@ $(document).ready(function() {
 
   //alert("vivo");
   //recupero il link del menu
-  var btnEvento = $('.evento');
+  /*var btnEvento = $('.evento2');
   var btnLocale = $('.locale');
 
   btnEvento.on({
     click: function() {
+      alert('ciao');
       $('#1').show(400);
     },
   });
@@ -54,6 +81,6 @@ $(document).ready(function() {
     click: function() {
       $('#2').show(400);
     },
-  });
+  });*/
 
 });

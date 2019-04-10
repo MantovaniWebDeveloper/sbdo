@@ -9,19 +9,19 @@
       </div>
       <div class="box">
         <div class="wrapTitle">
-          <a href="#"><h5 class="titleNav evento">Evento<i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
+          <a href="#"><h5 class="titleNav eventoMobile">Evento<i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
         </div>
-        <div id="1"class="dropDownMenu">
-          <div class="wrapSubTitle">
+        <div id="unoMobile"class="dropDownMenuMobile">
+          <div class="wrapSubTitle wrapCrea">
             <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
           </div>
         </div>
       </div>
       <div class="box">
         <div class="wrapTitle">
-          <a href="#"><h5 class="titleNav locale">Locale<i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
+          <a href="#"><h5 class="titleNav localeMobile">Locale<i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
         </div>
-        <div id="2"class="dropDownMenu">
+        <div id="dueMobile"class="dropDownMenuMobile">
           <div class="wrapSubTitle">
             <a href="{{ route('creaLocale')}}"><h5 class="subTitleNav">Crea</h5></a>
             <a href="#"><h5 class="subTitleNav">Lista</h5></a>
@@ -30,7 +30,7 @@
       </div>
       <div class="box">
         <div class="wrapTitle">
-          <a href=" "><h5 class="titleNav genere">Genere musicale <i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
+          <a href=" "><h5 class="titleNav genereMobile">Genere musicale <i class="fas fa-sort-down ml-1 pb-1"></i></h5></a>
 
         </div>
       </div>
@@ -50,9 +50,9 @@
         </div>
         <div class="box">
           <div class="wrapTitle">
-            <a href="#"><h5 class="titleNav evento">Evento</h5></a>
+            <a href="#"><h5 class="titleNav eventoDesktop">Evento</h5></a>
           </div>
-          <div id="1"class="dropDownMenu">
+          <div id="uno"class="dropDownMenuDesktop">
             <div class="wrapSubTitle">
               <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
             </div>
@@ -60,9 +60,9 @@
         </div>
         <div class="box">
           <div class="wrapTitle">
-            <a href="#"><h5 class="titleNav locale">Locale</h5></a>
+            <a href="#"><h5 class="titleNav localeDesktop">Locale</h5></a>
           </div>
-          <div id="2"class="dropDownMenu">
+          <div id="due"class="dropDownMenuDesktop">
             <div class="wrapSubTitle">
               <a href="{{ route('creaLocale')}}"><h5 class="subTitleNav">Crea</h5></a>
               <a href="#"><h5 class="subTitleNav">Lista</h5></a>
@@ -71,7 +71,7 @@
         </div>
         <div class="box">
           <div class="wrapTitle">
-            <a href=" "><h5 class="titleNav genere">Genere musicale</h5></a>
+            <a href=" "><h5 class="titleNav genereDesktop">Genere musicale</h5></a>
 
           </div>
         </div>

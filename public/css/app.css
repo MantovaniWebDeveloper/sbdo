@@ -10689,21 +10689,21 @@ a.text-dark:focus {
   color: #716f6f;
 }
 
-#wrapDashBoard #menuDashBoard .dropDownMenu {
+#wrapDashBoard #menuDashBoard .dropDownMenuDesktop {
   display: none;
-  height: 100px;
+  height: 100%;
 }
 
-#wrapDashBoard #menuDashBoard .dropDownMenu .wrapSubTitle {
+#wrapDashBoard #menuDashBoard .dropDownMenuDesktop .wrapSubTitle {
   width: 100%;
   margin-left: 25px;
 }
 
-#wrapDashBoard #menuDashBoard .dropDownMenu .wrapSubTitle .subTitleNav {
+#wrapDashBoard #menuDashBoard .dropDownMenuDesktop .wrapSubTitle .subTitleNav {
   padding-top: 10px;
   width: 100%;
   height: 100%;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 #wrapDashBoard #menuDashBoard .wrapMenuInterno {
@@ -10744,17 +10744,18 @@ a.text-dark:focus {
     display: flex;
     align-items: center;
     height: 50px;
-    padding: 10px;
+    padding: 5px;
     color: #716f6f;
   }
 
-  #menuDashBoardMobile .dropDownMenu {
+  #menuDashBoardMobile .dropDownMenuMobile {
     display: none;
-    height: 100px;
+    height: 100%;
   }
 
-  #menuDashBoardMobile .dropDownMenu .wrapSubTitle {
+  #menuDashBoardMobile .dropDownMenuMobile .wrapSubTitle {
     width: 100%;
+    margin-left: 25px;
   }
 
   #wrapDashBoard #menuDashBoard {
@@ -10783,12 +10784,12 @@ a.text-dark:focus {
     font-size: 13px;
   }
 
-  #menuDashBoardMobile .dropDownMenu {
+  #menuDashBoardMobile .dropDownMenuMobile {
     display: none;
-    height: 100px;
+    height: 100%;
   }
 
-  #menuDashBoardMobile .dropDownMenu .wrapSubTitle {
+  #menuDashBoardMobile .dropDownMenuMobile .wrapSubTitle {
     width: 100%;
     margin-left: 25px;
   }
