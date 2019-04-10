@@ -10746,6 +10746,7 @@ a.text-dark:focus {
     height: 50px;
     padding: 5px;
     color: #716f6f;
+    cursor: pointer;
   }
 
   #menuDashBoardMobile .dropDownMenuMobile {
