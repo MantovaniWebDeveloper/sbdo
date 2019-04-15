@@ -36600,7 +36600,8 @@ $(document).ready(function () {
   $('.hamburgerMobileMenu > a').on("click", function () {
     console.log('mi hai cliccato per chiudere');
     $('.hamburgerMobileMenu').removeClass('open');
-  });
+  }); //gestione menu admin
+
   $(".eventoDesktop").on("click", function () {
     //alert('ciao');
     $('#uno').toggle();

@@ -36,8 +36,7 @@
       </div>
       <div class="box">
         <div class="wrapTitle">
-          <a href=" "><h5 class="titleNav dj">Dj</h5></a>
-
+          <a href=" "><h5 class="titleNav utentiMobile">utenti</h5></a>
         </div>
       </div>
     </div>
@@ -77,8 +76,7 @@
         </div>
         <div class="box">
           <div class="wrapTitle">
-            <a href=" "><h5 class="titleNav dj">Dj</h5></a>
-
+            <a href=""><h5 class="titleNav utentiDesktop">Crea utente</h5></a>
           </div>
         </div>
       </div>

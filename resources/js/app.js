@@ -30,7 +30,7 @@ $(document).ready(function() {
     $('.hamburgerMobileMenu').removeClass('open');
   });
 
-
+//gestione menu admin
   $(".eventoDesktop").on("click",function(){
       //alert('ciao');
       $('#uno').toggle();
