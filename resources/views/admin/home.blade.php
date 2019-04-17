@@ -5,37 +5,26 @@
     <div id="wrapDashBoard">
       @include('_partials.menu')
       <div id="contentDashBoard">
-        <div class="table-responsive">
-          <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col " class="text-center">idEvento</th>
-                <th scope="col" class="text-center">Evento</th>
-                <th scope="col " class="text-center">Data</th>
-                <th scope="col " class="text-center">Organizzatore</th>
-                <th scope="col " class="text-center">Modifica</th>
-                <th scope="col " class="text-center">cancella</th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach ($eventi as  $evento)
-                <tr>
-                  <th class="text-center">{{$evento->id}}</th>
-                  <td class="text-center">{{$evento->nomeEvento}}</td>
-                  <td class="text-center">{{$evento->data_svolgimento}}</td>
-                  <td class="text-center">{{$evento->organizzatore}}</td>
-                  <td class="text-center"><a href="{{ route('modificaEvento', $evento->id)}}"><button class="btn btn-success">Modica</button></a></td>
-                  <td class="text-center">
-                    <form class="" action="{{ route('cancellaEvento', $evento->id) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <input class="btn btn-danger" type="submit" name="" value="Elimina">
-                  </form>
-                </tr>
-              @endforeach
-            </tbody>
-          </table>
+        @foreach ($eventi as  $evento)
+        <div class="card text-center">
+            <div class="card-header">
+              <h4>{{$evento->data_svolgimento}} - id evento : {{$evento->id}}</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">nome evento: {{$evento->nomeEvento}}</h5>
+              <p class="card-text">nome organizzatore: {{$evento->organizzatore}}</p>
+              <a href="{{ route('modificaEvento', $evento->id)}}"><button class="btn btn-success">Modica</button></a>
+              <form class="formButton" action="{{ route('cancellaEvento', $evento->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <input class="btn btn-danger" type="submit" name="" value="Elimina">
+              </form>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
         </div>
+        @endforeach
 
       </div>
     </div>

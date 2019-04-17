@@ -1,7 +1,7 @@
 <div id="menuDashBoard">
   <div class="box">
     <div class="wrapTitle">
-      <a href=" "><h5 class="titleNav dash">Dashboard</h5></a>
+      <a href="{{ route('index') }}"><h5 class="titleNav dash">Dashboard</h5></a>
     </div>
   </div>
   <div class="box">

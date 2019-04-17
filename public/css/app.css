@@ -10727,6 +10727,10 @@ a.text-dark:focus {
   background-color: #2e323a;
 }
 
+#wrapDashBoard #contentDashBoard .formButton {
+  display: inline-block;
+}
+
 @media (max-width: 767.98px) {
   #menuDashBoardMobile {
     display: flex;
