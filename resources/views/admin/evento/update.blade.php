@@ -1,53 +1,15 @@
 @extends('layouts.admin')
 @section('content')
   <div class="">
+    @include('_partials.menuMobileAdmin')
     <div id="wrapDashBoard">
-      <div id="menuDashBoard">
-        <div class="box">
-          <div class="wrapTitle">
-            <a href=" "><h5 class="titleNav dash">Dashboard</h5></a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="wrapTitle">
-            <a href="#"><h5 class="titleNav evento">Evento</h5></a>
-          </div>
-          <div id="1"class="dropDownMenu">
-            <div class="wrapSubTitle">
-              <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
-              <a href="#"><h5 class="subTitleNav">Lista</h5></a>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="wrapTitle">
-            <a href="#"><h5 class="titleNav locale">Locale</h5></a>
-          </div>
-          <div id="2"class="dropDownMenu">
-            <div class="wrapSubTitle">
-              <a href="#"><h5 class="subTitleNav">Crea</h5></a>
-              <a href="#"><h5 class="subTitleNav">Lista</h5></a>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="wrapTitle">
-            <a href=" "><h5 class="titleNav genere">Genere musicale</h5></a>
-
-          </div>
-        </div>
-        <div class="box">
-          <div class="wrapTitle">
-            <a href=" "><h5 class="titleNav dj">Dj</h5></a>
-
-          </div>
-        </div>
-      </div>
+      @include('_partials.menu')
       <div id="contentDashBoard">
         <div class="container">
-          <h2 class="titleForm">Crea evento</h2>
-          <form class="" action="{{route('updateEvento', $evento->id)}}" method="put" enctype="multipart/form-data">
-            @csrf
+          <h2 class="titleForm">Modifica evento</h2>
+          <form class="" action="{{route('updateEvento', $evento->id)}}" method="post" enctype="multipart/form-data">
+            @csrf_field
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row">
               <div class="col-6">
                 <input type="hidden" name="" value="{{$evento->id}}">
@@ -74,9 +36,7 @@
               </div>
             </div>
             <div class="custom-file mb-3 mt-3">
-              <input type="file" class="custom-file-input" id="validatedCustomFile" required name="locandina">
-              <label class="custom-file-label" for="validatedCustomFile">Carica locandina...</label>
-              <div class="invalid-feedback">Example invalid custom file feedback</div>
+              <input type="file" name="locandina"  value="">
             </div>
             <div class="form-group">
               <label for="descrizione" class="text-light">Descrizione</label>

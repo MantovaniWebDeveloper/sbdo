@@ -24,7 +24,7 @@
                     <span>costo ingresso: {{$evento->costo_ingresso}} €</span>
 
                   @endif
-                  
+
                   <div>
                     <i class="fas fa-map-marker-alt pr-2"></i>
                     <small>{{$evento->nomeLocale}}</small>

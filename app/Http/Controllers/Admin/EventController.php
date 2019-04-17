@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
+use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use App\Event;
 use App\Local;
@@ -69,18 +70,11 @@ class EventController extends Controller
     {
         //recupero evento da modificare tramite id
         $evento = Event::find($id);
-        //dd($request->all());
 
-        //recupero tutti i dati
         $dataEvento = $request->all();
+        $locandinaAggiornata = Storage::putFile('locandine_eventi', $request->file('locandina'));
+        $dataEvento['locandina'] = $locandinaAggiornata;
 
-        //creo uno slug dal nome del evento con Str::slug
-        //$dataEvento['slug'] = Str::slug($dataEvento['nomeEvento']);
-        //risolvere problema aggiornamento img locandina
-      //  $dataEvento['locandina'] = $locandina;
-
-        //gli metto dentro al dataEvento la locandina caricata
-        //aggiorno l'evento esistente
         $evento->update($dataEvento);
 
         return redirect()->route('index');
