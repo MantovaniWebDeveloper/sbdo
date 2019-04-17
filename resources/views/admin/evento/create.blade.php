@@ -45,11 +45,13 @@
               </textarea>
             </div>
             <div class="row mb-2">
-              <div class="col-6">
+              <div class="col-12">
                 <label for="costo" class="text-light">Costo ingresso</label>
                 <input name="costo_ingresso" class="form-control"type="text" name="" value="">
               </div>
-              <div class="col-6">
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
                 @foreach ($generi as  $genere)
                   <div class="form-check form-check-inline ">
                     <input class="form-check-input checkGeneri" type="checkbox" id="inlineCheckbox1" name="generi[]" value="{{$genere->id}}">
@@ -58,6 +60,8 @@
                 @endforeach
               </div>
             </div>
+
+            </div>
             <input class="col-12 btn btn-success btn-lg"type="submit" name="" value="Salva">
           </form>
         </div>
@@ -65,5 +69,6 @@
       </div>
     </div>
   </div>
-
+  <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 @endsection
