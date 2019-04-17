@@ -1,52 +1,32 @@
 @extends('layouts.admin')
 @section('content')
+  @include('_partials.menuMobileAdmin')
   <div id="wrapDashBoard">
-    <div id="menuDashBoard">
-      <div class="box">
-        <div class="wrapTitle">
-          <a href=" "><h5 class="titleNav dash">Dashboard</h5></a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="wrapTitle">
-          <a href="#"><h5 class="titleNav evento">Evento</h5></a>
-        </div>
-        <div id="1"class="dropDownMenu">
-          <div class="wrapSubTitle">
-            <a href="{{ route('creaEvento')}}"><h5 class="subTitleNav">Crea</h5></a>
-          </div>
-        </div>
-      </div>
-      <div class="box">
-        <div class="wrapTitle">
-          <a href="#"><h5 class="titleNav locale">Locale</h5></a>
-        </div>
-        <div id="2"class="dropDownMenu">
-          <div class="wrapSubTitle">
-            <a href="{{ route('creaLocale')}}"><h5 class="subTitleNav">Crea</h5></a>
-            <a href="#"><h5 class="subTitleNav">Lista</h5></a>
-          </div>
-        </div>
-      </div>
-      <div class="box">
-        <div class="wrapTitle">
-          <a href=" "><h5 class="titleNav genere">Genere musicale</h5></a>
+    @include('_partials.menu')
 
-        </div>
-      </div>
-      <div class="box">
-        <div class="wrapTitle">
-          <a href=" "><h5 class="titleNav dj">Dj</h5></a>
-
-        </div>
-      </div>
-    </div>
 
     <div id="contentDashBoard">
       <div class="container">
-        
-
-
+        @foreach ($locali as  $locale)
+          <div class="card text-center mt-2 ">
+              <div class="card-header">
+                <h4> id locale : {{$locale->id}}</h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">nome locale: {{$locale->nome}}</h5>
+                <p class="card-text">indirizzo: {{$locale->indirizzo}}</p>
+                <a href=""><button class="btn btn-success">Modica</button></a>
+                <form class="formButton" action="" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <input class="btn btn-danger" type="submit" name="" value="Elimina">
+                </form>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+          </div>
+        @endforeach
       </div>
     </div>
   </div>

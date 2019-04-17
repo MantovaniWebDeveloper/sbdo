@@ -10,7 +10,10 @@ class LocalController extends Controller
 {
     public function index()
     {
-        //
+      $locali = Local::all();
+
+
+      return view('admin.locale.lista', compact('locali'));
     }
     public function create()
     {

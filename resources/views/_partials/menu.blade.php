@@ -21,7 +21,7 @@
     <div id="due"class="dropDownMenuDesktop">
       <div class="wrapSubTitle">
         <a href="{{ route('creaLocale')}}"><h5 class="subTitleNav">Crea</h5></a>
-        <a href="#"><h5 class="subTitleNav">Lista</h5></a>
+        <a href="{{ route('listaLocali')}}"><h5 class="subTitleNav">Lista</h5></a>
       </div>
     </div>
   </div>

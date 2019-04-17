@@ -33,6 +33,7 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function()
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function(){
 
   Route::get('locale/crea_locale','LocalController@create')->name('creaLocale');
+  Route::get('locale/listaLocali','LocalController@index')->name('listaLocali');
   Route::post('locale/salva_locale','LocalController@store')->name('salvaLocale');
 });
 
