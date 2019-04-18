@@ -11098,6 +11098,30 @@ header .hamburgerMobileMenu {
 }
 
 @media (max-width: 767.98px) {
+  #internoWraptotale {
+    height: 250px;
+  }
+
+  #internoWraptotale #internoSfondoFront {
+    height: 300px;
+  }
+
+  #internoWraptotale #internoSfondoFront #internoOpacita {
+    height: 300px;
+  }
+
+  #internoWraptotale #internoSfondoFront #internoOpacita #internoWrapForm {
+    height: 250px;
+  }
+
+  #internoWraptotale #internoSfondoFront #internoOpacita #internoWrapForm form {
+    padding-top: 120px;
+  }
+
+  #internoWraptotale #internoSfondoFront #internoOpacita #internoWrapForm .btnInvioForm {
+    width: 100%;
+  }
+
   .inputMobile {
     padding-top: 10px;
   }
