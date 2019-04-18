@@ -15,8 +15,7 @@
               <div class="card-body">
                 <h5 class="card-title">nome locale: {{$locale->nome}}</h5>
                 <p class="card-text">indirizzo: {{$locale->indirizzo}}</p>
-                <a href=""><button class="btn btn-success">Modica</button></a>
-                <form class="formButton" action="" method="post">
+                <form class="formButton" action="{{ route('cancellaLocale', $locale->id) }}" method="post">
                   @csrf
                   @method('DELETE')
                   <input class="btn btn-danger" type="submit" name="" value="Elimina">

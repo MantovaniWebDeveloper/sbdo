@@ -13,7 +13,7 @@
 //rotta per la parte pubblica home
 Route::get('/', 'HomeController@index')->name('home');
 
-
+//tolgo la registrazione utenti
 Auth::routes(['register' => false]);
 
 
@@ -31,10 +31,10 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function()
 });
 //gruppo di rotte amministrative con resource per la parte amministrativa dei locali admin
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->group(function(){
-
   Route::get('locale/crea_locale','LocalController@create')->name('creaLocale');
   Route::get('locale/listaLocali','LocalController@index')->name('listaLocali');
   Route::post('locale/salva_locale','LocalController@store')->name('salvaLocale');
+  Route::delete('/destroy_locale/{id}','LocalController@destroy')->name('cancellaLocale');
 });
 
 Route::options('/{path}', function(){

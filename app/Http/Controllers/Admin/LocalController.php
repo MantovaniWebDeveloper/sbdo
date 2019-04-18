@@ -35,9 +35,11 @@ class LocalController extends Controller
     {
         //
     }
-    public function edit(Local $local)
+    public function edit($id)
     {
-        //
+        $locale = Local::find($id); // metodo con find
+      //  dd($locale);
+        return view('admin.locale.update', compact('locale'));
     }
 
     public function update(Request $request, Local $local)
@@ -45,8 +47,13 @@ class LocalController extends Controller
         //
     }
 
-    public function destroy(Local $local)
+    public function destroy($id)
     {
-        //
+      // metodo con find trovo tramite id
+      $locale = Local::find($id);
+      //elimino */
+      $locale->delete();
+
+      return redirect()->route('listaLocali');
     }
 }
