@@ -10724,7 +10724,8 @@ a.text-dark:focus {
 #wrapDashBoard #contentDashBoard {
   height: 100%;
   width: 80%;
-  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
   background-color: #2e323a;
 }
 
