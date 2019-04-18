@@ -4,9 +4,7 @@
       <div id="internoWrapForm"class="wrapForm">
         <div class="container">
           <form class="" action="{{route('ricercaEventi')}}" method="get">
-            {{csrf_field()}}
             @method('GET')
-
             <div class="form-row">
               <div class="inputMobile col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                 <label for="citta" class="text-light">Seleziona la località:</label>

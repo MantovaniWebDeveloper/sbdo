@@ -59,7 +59,9 @@
     }
   }
 }
-
+.note-toolbar {
+  background-color: #fff;
+}
 @include media-breakpoint-down(sm) {
 #menuDashBoardMobile {
     display: flex;

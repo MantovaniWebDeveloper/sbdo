@@ -10733,6 +10733,10 @@ a.text-dark:focus {
   display: inline-block;
 }
 
+.note-toolbar {
+  background-color: #fff;
+}
+
 @media (max-width: 767.98px) {
   #menuDashBoardMobile {
     display: flex;

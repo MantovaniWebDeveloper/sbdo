@@ -14,6 +14,7 @@ $(document).ready(function() {
   console.log(oggi);
   $('#dataGiorno').val(oggi);
 
+  $('#descrizioneEvento').summernote();
   //jquery front end
 
   var hamburger = $('.hambMenu ');

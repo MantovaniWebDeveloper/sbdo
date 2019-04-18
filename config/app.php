@@ -164,7 +164,6 @@ return [
 
 
 
-
         /*
          * Package Service Providers...
          */
@@ -179,6 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
     ],
+    Unisharp\Ckeditor\ServiceProvider::class,
+
 
     /*
     |--------------------------------------------------------------------------

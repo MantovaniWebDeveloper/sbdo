@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
               <label for="descrizione" class="text-light">Descrizione</label>
-              <textarea class="form-control" name="descrizione" rows="8" cols="80">
+              <textarea id="descrizioneEvento" class="form-control" name="descrizione" rows="8" cols="80">
 
               </textarea>
             </div>
@@ -69,6 +69,5 @@
       </div>
     </div>
   </div>
-  <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  
 @endsection
