@@ -29,6 +29,7 @@
 
         <form class="" action="{{route('salvaLocale')}}" method="post" >
           @csrf
+          <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
               <label for="Nome Locale" class="text-light">Nome Locale</label>

@@ -14,8 +14,8 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 //tolgo la registrazione utenti
-Auth::routes(['register' => false]);
-
+//Auth::routes(['register' => false]);
+Auth::routes();
 
 
 

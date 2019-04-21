@@ -36,11 +36,14 @@
               </div>
             </div>
             <div class="custom-file mb-3 mt-3">
-              <input type="file" name="locandina"  value="">
+              <!--<input type="file" name="locandina"  value="">-->
+              <input type="file" class="custom-file-input" id="validatedCustomFile" required name="locandina">
+              <label class="custom-file-label" for="validatedCustomFile">Carica locandina...</label>
+              <div class="invalid-feedback">Example invalid custom file feedback</div>
             </div>
             <div class="form-group">
               <label for="descrizione" class="text-light">Descrizione</label>
-              <textarea class="form-control" name="descrizione" rows="8" cols="80">
+              <textarea id="descrizioneEvento" class="form-control" name="descrizione" rows="8" cols="80">
                 {{$evento->descrizione}}
               </textarea>
             </div>

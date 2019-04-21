@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function evento(){
+
+      return $this->belongsTo('App\Event');
+    }
+
+    public function locale(){
+
+      return $this->belongsTo('App\Local');
+    }
 }

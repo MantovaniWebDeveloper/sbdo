@@ -9,6 +9,7 @@
           <h2 class="titleForm">Crea evento</h2>
           <form class="" action="{{route('store')}}" method="post" enctype="multipart/form-data">
             @csrf
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <div class="row">
               <div class="col-6">
                 <label for="nome evento" class="text-light">Nome evento</label>
@@ -45,7 +46,7 @@
               </textarea>
             </div>
             <div class="row mb-2">
-              <div class="col-12">
+              <div class="col-6">
                 <label for="costo" class="text-light">Costo ingresso</label>
                 <input name="costo_ingresso" class="form-control"type="text" name="" value="">
               </div>
@@ -60,14 +61,14 @@
                 @endforeach
               </div>
             </div>
+            <input class="col-12 btn btn-success btn-lg"type="submit" name="" value="Salva">
 
             </div>
-            <input class="col-12 btn btn-success btn-lg"type="submit" name="" value="Salva">
           </form>
         </div>
 
       </div>
     </div>
   </div>
-  
+
 @endsection
