@@ -26,7 +26,7 @@ class EventController extends Controller
           $eventi = Event::where('user_id',$idUser)->get();
         }
         else {
-          dd('non ho trovato niente');
+          $eventi = Event::all();
         }
 
         //dd($eventi);
