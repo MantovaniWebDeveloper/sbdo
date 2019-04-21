@@ -161,6 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
 
 
@@ -168,7 +169,6 @@ return [
         /*
          * Package Service Providers...
          */
-         Zizaco\Entrust\EntrustServiceProvider::class,
 
         /*
          * Application Service Providers...
