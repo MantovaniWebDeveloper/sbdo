@@ -27,13 +27,16 @@
   </div>
   <div class="box">
     <div class="wrapTitle">
+      @if (Auth::user()->hasRole('superadmin'))
       <a href=" "><h5 class="titleNav genereDesktop">Genere musicale</h5></a>
-
+      @endif
     </div>
   </div>
   <div class="box">
     <div class="wrapTitle">
+      @if (Auth::user()->hasRole('superadmin'))
       <a href=""><h5 class="titleNav utentiDesktop">Crea utente</h5></a>
+      @endif
     </div>
   </div>
 </div>

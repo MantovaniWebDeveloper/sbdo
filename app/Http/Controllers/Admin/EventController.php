@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\File;
@@ -16,7 +17,18 @@ class EventController extends Controller
 
     public function index()
     {
-        $eventi = Event::all();
+        $idUser = Auth::user()->id;
+
+        if (Auth::user()->hasRole('superadmin')) {
+          $eventi = Event::all();
+        }
+        else if (Auth::user()->hasRole('Editor')) {
+          $eventi = Event::where('user_id',$idUser)->get();
+        }
+        else {
+          dd('non ho trovato niente');
+        }
+
         //dd($eventi);
         return view('admin.home', compact('eventi'));
     }

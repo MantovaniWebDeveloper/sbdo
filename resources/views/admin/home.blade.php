@@ -9,7 +9,7 @@
           @foreach ($eventi as  $evento)
           <div class="card text-center mt-2">
               <div class="card-header">
-                <h4>{{$evento->data_svolgimento}} - id evento : {{$evento->id}}</h4>
+                <h4>{{$evento->data_svolgimento}} - id evento : {{$evento->user_id}}</h4>
                 <h4 class="text-right">utente: {{$evento->user_id}}</h4>
               </div>
               <div class="card-body">
@@ -22,12 +22,8 @@
                   <input class="btn btn-danger" type="submit" name="" value="Elimina">
                 </form>
               </div>
-              <div class="card-footer text-muted">
-                2 days ago
-              </div>
           </div>
           @endforeach
-        </div>
       </div>
     </div>
   </div>

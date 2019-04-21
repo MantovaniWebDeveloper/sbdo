@@ -18,7 +18,9 @@
                 <form class="formButton" action="{{ route('cancellaLocale', $locale->id) }}" method="post">
                   @csrf
                   @method('DELETE')
-                  <input class="btn btn-danger" type="submit" name="" value="Elimina">
+                  @if (Auth::user()->hasRole('superadmin'))
+                    <input class="btn btn-danger" type="submit" name="" value="Elimina">
+                  @endif
                 </form>
               </div>
               <div class="card-footer text-muted">
