@@ -53914,6 +53914,7 @@ $.ajaxSetup({
   }
 });
 $(document).ready(function () {
+  //  $('#descrizioneEvento').summernote();
   //recuperare data odierna e poi inserita nel inputa della data del search
   var oggi = new Date().toISOString().substr(0, 10);
   console.log(oggi);

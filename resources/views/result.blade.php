@@ -10,10 +10,7 @@
     <div class="wrapReslutContentInterno">
         @foreach ($eventi as $key => $evento)
               <div class="row mb-2">
-              <div class="imgCategory col-12 col-sm-12 col-md-4 col-lg-4">
-                <img class="img-fluid-dario" src="{{asset('storage/' . $evento->locandina)}}" alt="">
-              </div>
-              <div class="contentText col-12 col-sm-12 col-md-8 col-lg-8">
+              <div class="contentText col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="wrapTitoloEvento">
                   <a href="{{ route('event.show', $evento->id) }}"><h3 class="nomeEvento pr-3 ">{{$evento->nomeEvento}}</h3></a>
                 </div>

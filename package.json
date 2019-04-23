@@ -29,7 +29,6 @@
         "modernizr": "^3.7.1",
         "moment": "^2.24.0",
         "opencage-api-client": "^0.5.0",
-        "select2": "^4.0.6-rc.1",
-        "summernote": "^0.8.11"
-    }
+        "select2": "^4.0.6-rc.1"
+  }
 }

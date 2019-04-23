@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <img class="locandinaInt img-fluid" src="{{asset('storage/' . $evento->locandina)}}" alt="">
+      <img class="locandinaInt img-fluid" src="{{asset('storage/'.$evento->locandina)}}" alt="">
     </div>
   </div>
   <div class="row pt-2">
