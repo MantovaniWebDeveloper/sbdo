@@ -7,34 +7,40 @@
 <div class="wrapResultEvent">
   <div class="container">
     <h3 class="titoloHomeResult">Risultati della ricerca su : {{$localita}}</h3>
-
+    <div class="wrapReslutContentInterno">
         @foreach ($eventi as $key => $evento)
-            <div class="wrapReslutContentInterno">
-              <div class="row">
+              <div class="row mb-2">
               <div class="imgCategory col-12 col-sm-12 col-md-4 col-lg-4">
-                <img class="img-fluid" src="{{asset('storage/' . $evento->locandina)}}" alt="">
-
+                <img class="img-fluid-dario" src="{{asset('storage/' . $evento->locandina)}}" alt="">
               </div>
               <div class="contentText col-12 col-sm-12 col-md-8 col-lg-8">
-                <a href="{{ route('event.show', $evento->id) }}"><span class="nomeEvento pr-3 ">{{$evento->nomeEvento}}</span></a>
+                <div class="wrapTitoloEvento">
+                  <a href="{{ route('event.show', $evento->id) }}"><h3 class="nomeEvento pr-3 ">{{$evento->nomeEvento}}</h3></a>
+                </div>
+                <div class="locale">
+                  <p class="nominativoLocale">{{$evento->nomeLocale}}</p>
+                </div>
+                <div class="indirizzo">
+                  <i class="fas fa-map-marker-alt pr-1"></i>
+                  <small >{{$evento->indirizzo}}</small> <small>{{$evento->citta}}</small> - <small>{{$evento->provincia}}</small>
+                </div>
                   @if($evento->costo_ingresso == 0)
-                    <span>Ingresso gratuito</span>
+                    <div class="ingressoGratuito">
+                      <p>Ingresso gratuito</p>
+                    </div>
 
                   @else
-                    <span>costo ingresso: {{$evento->costo_ingresso}} €</span>
-
+                    <div class="ingressoPagamento">
+                      <p>costo ingresso: {{$evento->costo_ingresso}} €</p>
+                    </div>
                   @endif
 
                   <div>
-                    <i class="fas fa-map-marker-alt pr-2"></i>
-                    <small>{{$evento->nomeLocale}}</small>
-                    <small >{{$evento->indirizzo}}</small>
-                    <small>{{$evento->citta}}</small> - <small>{{$evento->provincia}}</small>
                     <p class="pt-3">{{$evento->descrizione}}</p>
                   </div>
-
-
-              </div>
+              </di
+              v>
+              <div class="wrapGeneri"></div>
             </div>
 
           </div>

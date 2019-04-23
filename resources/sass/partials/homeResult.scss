@@ -9,6 +9,36 @@
       margin-bottom: 30px;
       .nomeEvento {
         font-size: 25px;
+        color: #ec407a;
+        text-transform: uppercase;
+      }
+      .imgCategory {
+        .img-fluid-dario {
+          max-width: 200px;
+          height: auto;
+        }
+      }
+      .contentText {
+        i {
+          color:#ec407a;
+        }
+        .indirizzo {
+          small {
+            color: #38c171;
+          }
+        }
+        .ingressoGratuito {
+          background-color: #38c172;
+          color: #fff;
+          border-radius: 5px;
+          text-align: center;
+        }
+        .ingressoPagamento {
+          background-color: rgb(252, 170, 30);
+          color: #fff;
+          border-radius: 5px;
+          text-align: center;
+        }
       }
       .salsaCubana {
         background-color: #38c171;
@@ -60,6 +90,23 @@
 }
 
 @include media-breakpoint-down(sm) {
+.wrapResultEvent {
+  .wrapReslutContentInterno {
+    .nomeEvento {
+      padding-top: 10px;
+      margin-bottom: 0px;
+    }
+    .nominativoLocale {
+      margin-bottom: 0px;
+    }
+    .imgCategory {
+      .img-fluid-dario {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
   .quadroGenere {
     width: 100%;
   }
