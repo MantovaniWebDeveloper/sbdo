@@ -11,6 +11,7 @@
           <div class="card text-center mt-2 ">
               <div class="card-header">
                 <h4> id locale : {{$locale->id}}</h4>
+                <h4> id user : {{$locale->user_id}}</h4>
               </div>
               <div class="card-body">
                 <h5 class="card-title">nome locale: {{$locale->nome}}</h5>

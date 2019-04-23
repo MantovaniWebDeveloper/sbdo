@@ -21,8 +21,8 @@ class Event extends Model
     return $this->belongsToMany('App\Genre');
   }
 
-  public function userE() {
-     return $this->hasOne('App\User');
+  public function user() {
+     return $this->belongsTo('App\User');
  }
 
 }

@@ -17,7 +17,9 @@ class EventController extends Controller
 
     public function index()
     {
+
         $idUser = Auth::user()->id;
+      //  $users = DB::table('users')->count();
 
         if (Auth::user()->hasRole('superadmin')) {
           $eventi = Event::all();

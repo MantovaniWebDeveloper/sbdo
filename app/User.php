@@ -42,7 +42,7 @@ class User extends Authenticatable
 
     public function evento(){
 
-      return $this->belongsTo('App\Event');
+      return $this->hasOne('App\Event');
     }
 
     public function locale(){
